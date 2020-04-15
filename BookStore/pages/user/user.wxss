@@ -1,0 +1,49 @@
+.user{
+  margin-top: 20rpx;
+}
+.user .userCenter{
+  margin-bottom: 250rpx;
+}
+
+.user .userCenter .userCenterImage{
+  display: flex;
+  justify-content: center;
+}
+
+.user .userCenter .userCenterImage image{
+  width: 90%;
+  height: 350rpx;
+}
+
+.user .userCenter .userInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 150rpx;
+  margin-top: -300rpx;
+}
+
+.user .userCenter .userInfo{
+  font-size: 25rpx;
+  color: #D68305;
+}
+
+.user .redirect .hr{
+  border: 1rpx solid gray;
+  margin: 0rpx 15rpx 30rpx;
+}
+
+.user .redirect .functionRedirect{
+  display: flex;
+  flex-direction: row;
+  margin-left: 80rpx;
+  font-size: 35rpx;
+  position: relative;
+}
+
+.right{
+  position: absolute;
+  right: 70rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+

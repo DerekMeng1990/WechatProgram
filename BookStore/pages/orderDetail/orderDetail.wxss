@@ -1,0 +1,101 @@
+.orderDetailPage{
+  margin: 20rpx 30rpx 0rpx;
+}
+.orderDetailPage .title{
+  font-size: 40rpx;
+}
+
+.orderDetailPage .hr{
+  border: 1rpx solid grey;
+  margin-bottom: 10rpx;
+}
+
+.orderDetailPage .table .tr{
+  display: flex;
+  flex-direction: row;
+}
+
+.orderDetailPage .table .tr .th{
+  font-size: 25rpx;
+  font-weight: bold;
+}
+
+.orderDetailPage .table .tr .left{
+  width: 70%;
+}
+
+.orderDetailPage .table .tr .middle{
+  width: 10%;
+}
+
+.orderDetailPage .table .tr .right{
+  width: 20%;
+}
+
+.orderDetailPage .table .orderItem{
+  margin-top: 20rpx;
+  color: grey;
+}
+
+.orderDetailPage .table .orderItem .middle, .orderDetailPage .table .orderItem .right{
+  font-size: 20rpx;
+}
+
+.orderDetailPage .table .orderItem .left .moreInfo{
+  font-size: 20rpx;
+  margin-left: 20rpx;
+} 
+
+.orderDetailPage .dhr{
+  border: 1rpx dashed grey;
+}
+
+.orderDetailPage .prices{
+  margin-top: 20rpx;
+}
+
+.orderDetailPage .prices .memberPrice, .orderDetailPage .prices .originalPrice,
+.orderDetailPage .prices .savePrice{
+  position: relative;
+}
+
+.orderDetailPage .prices .memberPrice .money, .orderDetailPage .prices .originalPrice .money,
+.orderDetailPage .prices .savePrice .money{
+  position: absolute;
+  right: 50rpx;
+}
+
+.orderDetailPage .prices .memberPrice text{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.orderDetailPage .prices .originalPrice, .orderDetailPage .prices .savePrice{
+  font-size: 20rpx;
+}
+
+.orderDetailPage .orderInfo, .orderDetailPage .shippingInfo{
+  margin-top: 20rpx;
+}
+
+
+.orderDetailPage .orderInfo .orderNumber, .orderDetailPage .orderInfo .orderDate,
+.orderDetailPage .shippingInfo .shippingName, .orderDetailPage .shippingInfo .shippingPhoneNum,
+.orderDetailPage .shippingInfo .shippingAddress{
+  position: relative;
+  font-size: 25rpx;
+  color: grey;
+}
+
+.orderDetailPage .orderInfo .orderNumber .content, .orderDetailPage .orderInfo .orderDate .content,
+.orderDetailPage .shippingInfo .shippingName .content, .orderDetailPage .shippingInfo .shippingPhoneNum .content,
+.orderDetailPage .shippingInfo .shippingAddress .content{
+  position: absolute;
+  right: 50rpx;
+}
+
+
+
+
+
+

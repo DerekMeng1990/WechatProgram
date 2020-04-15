@@ -1,0 +1,106 @@
+.main .login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+
+.main .login .loginImage{
+  display: flex;
+  justify-content: center;
+}
+
+.main .login image{
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+}
+
+
+.main .login .loginButton{
+  width: 15%;
+  font-size: 20rpx;
+  margin-top: -95rpx;
+  background-color: #E99A23;
+}
+
+.main .carouselDiv{
+  border: 1px solid red;
+  margin: 60rpx 15rpx 15rpx;
+}
+
+.main .shoppingPage{
+  margin: 0rpx 15rpx 30rpx;
+}
+
+.main .shoppingPage image{
+  width: 100%;
+  height: 100rpx;
+}
+
+.main .headLine text{
+  font-size: 50rpx;
+  margin-left: 15rpx;
+  color: #D68305;
+}
+
+.main .hr{
+  height: 2rpx;
+  background-color: black;
+  opacity: 0.2;
+  margin: 10rpx 15rpx 30rpx; 
+}
+
+.main .events{
+  margin: 0rpx 15rpx 30rpx;
+}
+
+.main .events .event{
+  display: flex;
+  flex-direction: row;
+}
+
+.main .events .event image{
+  border: 1px solid yellow;
+  margin-left: 15rpx;
+  width: 230rpx;
+  height: 300rpx;
+}
+
+.main .events .event .eventInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.main .events .event .eventInfo text{
+  font-size: 25rpx;
+  color: gray;
+  margin-left: 50rpx;
+}
+
+.main .events .event .eventInfo .date{
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+}
+
+.main .events .event .eventInfo .title{
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.main .events .event .enterButton{
+  font-size: 20rpx;
+  width: 35%;
+  border-radius: 300rpx;
+  background-color: #E99A23;
+  margin-top: 80rpx;
+  margin-left: 310rpx;
+}
+
+.main .events .hr{
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+}
+

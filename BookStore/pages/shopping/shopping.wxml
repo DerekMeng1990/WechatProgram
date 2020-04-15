@@ -1,0 +1,54 @@
+<view class="shoppingPage">
+  <view class="memberInfo">
+    <view class="memberInfoImage">
+      <image src="../../Picture/circle.png"></image>
+    </view>
+    <text>你好，张三</text>
+  </view>
+
+  <view class="title">
+    <text>我的图书列表</text>
+    <view class="hr"></view>
+  </view>
+
+  <view class="bookList">
+    <view class="eachBook">
+      <view class="check">
+        <image src="../../Picture/unchecked.png"></image>
+      </view>
+      <view class="bookListImage">
+        <image src=""></image>
+      </view>
+      <view class="bookInfo">
+        <text class="bookName">生命之书</text>
+        <text class="bookAuthor">作者: Stuldsosy sleol</text>
+        <text class="bookMemberPrice">会员价¥17.00</text>
+        <text class="bookOriginalPrice">定价¥29.00</text>
+      </view>
+    </view>
+    <view class="hr"></view>
+    <view class="eachBook">
+      <view class="check">
+        <image src="../../Picture/unchecked.png"></image>
+      </view>
+      <view class="bookListImage">
+        <image src=""></image>
+      </view>
+      <view class="bookInfo">
+        <text class="bookName">生命之书</text>
+        <text class="bookAuthor">作者: Stuldsosy sleol</text>
+        <text class="bookMemberPrice">会员价 ¥17.00</text>
+        <text class="bookOriginalPrice">定价 ¥29.00</text>
+      </view>
+    </view>
+    <view class="hr"></view>
+    <view class="totalPrice">
+      <text>总计</text>
+      <text class="number">¥34.00</text>
+    </view>
+  </view>
+
+  <view class="buyButton">
+    <button>立即购买</button>
+  </view>
+</view>

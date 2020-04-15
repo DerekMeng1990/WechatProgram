@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/membership/membership",
+    "pages/user/user",
+    "pages/shopping/shopping",
+    "pages/coupon/coupon",
+    "pages/editUserInfo/editUserInfo",
+    "pages/order/order",
+    "pages/orderDetail/orderDetail"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EEEEEE",
+    "navigationBarTitleText": "甘棠树下",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    
+    "selectedColor": "E99A23",
+    "backgroundColor": "#fffff",
+    "borderStyle": "black",
+    "list":[{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "Picture/home.png",
+      "selectedIconPath": "Picture/homePress.png"
+    },{
+      "pagePath": "pages/membership/membership",
+      "text": "会员",
+      "iconPath": "Picture/membership.png",
+      "selectedIconPath": "Picture/membershipPress.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "个人中心",
+      "iconPath": "Picture/userCenter.png",
+      "selectedIconPath": "Picture/userCenterPress.png"
+    }]
+  }
+}

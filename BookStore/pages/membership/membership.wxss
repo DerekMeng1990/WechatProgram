@@ -1,0 +1,71 @@
+.member{
+  margin-top: 20rpx;
+}
+
+.member .membercard{
+  margin-bottom: 220rpx;
+}
+
+
+.member .membercard .membercardImage{
+  display: flex;
+  justify-content: center;
+}
+
+.member .membercard .membercardImage image{
+  width: 90%;
+  height: 350rpx;
+}
+
+.member .membercard .memberInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 150rpx;
+  margin-top: -300rpx;
+}
+
+.member .membercard .memberInfo text{
+  font-size: 25rpx;
+  color: #D68305;
+}
+
+.member .renewPayment{
+  width: 90%;
+  height: 100rpx;
+  font-size: 40rpx;
+  background-color: #E99A23;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  box-shadow:  6rpx 6rpx 2px #A9A9A9;
+}
+
+.member .privilege{
+  margin: 80rpx 15rpx 30rpx;
+}
+
+.member .privilege text{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.member .privilege .hr{
+  border: 1rpx solid grey;
+  margin-top: 20rpx;
+}
+
+.member .privilege .privilegeContent{
+  height: 30rpx;
+  margin: 60rpx 50rpx 0rpx;
+}
+
+.member .privilege .privilegeContent image{
+  width: 20rpx;
+  height: 30rpx;
+}
+
+.member .privilege .privilegeContent text{
+  margin-left: 50rpx;
+  font-weight: normal;
+  font-size: 30rpx;
+}
+

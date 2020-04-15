@@ -1,0 +1,48 @@
+<view class="orderPage">
+  <view class="nav">
+    <view id="0" class="{{currentTab == 0?'selected':'unselected'}} title" bindtap="switchNav">
+      <text>待发货</text>
+      <view class="hr"></view>
+    </view>
+
+    <view id="1" class="{{currentTab == 1?'selected':'unselected'}} title" bindtap="switchNav">
+      <text>待收货</text>
+      <view class="hr"></view>
+    </view>
+
+    <view id="2" class="{{currentTab == 2?'selected':'unselected'}} title" bindtap="switchNav">
+      <text>已收货</text>
+      <view class="hr"></view>
+    </view>
+  </view>
+
+  <view class="mhr"></view>
+  
+  <view class="orderList">
+    <view class="eachOrder">
+      <view class="orderInfo">
+        <text class="orderNumber">订单编号: 8798373628</text>
+        <text class="orderDate">下单时间: 2020-03-07</text>
+      </view>
+      <view class="totalPrice">总价: ¥58.00 (含运费¥0.00)</view>
+      <view class="hr"></view>
+      <view class="operationButton">
+        <button class="firstButton">提醒发货</button>
+        <button class="secondButton" bindtap="toOrderDetailPage">订单详情</button>
+      </view>
+    </view>
+
+    <view class="eachOrder">
+      <view class="orderInfo">
+        <text class="orderNumber">订单编号: 8798373628</text>
+        <text class="orderDate">下单时间: 2020-03-07</text>
+      </view>
+      <view class="totalPrice">总价: ¥58.00 (含运费¥0.00)</view>
+      <view class="hr"></view>
+      <view class="operationButton">
+        <button class="firstButton">提醒发货</button>
+        <button class="secondButton" toOrderDetailPage>订单详情</button>
+      </view>
+    </view>
+  </view>
+</view>

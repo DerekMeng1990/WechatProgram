@@ -1,0 +1,41 @@
+<view class="member">
+  <view class="membercard">
+    <view class="membercardImage">
+      <image src="../../Picture/membershipCard.png"></image>
+    </view>
+    <view class="memberInfo">
+      <text>ID 5413458</text>
+      <text>1234 2343 8739</text>
+      <text>张三</text>
+    </view>
+  </view>
+
+  <view>
+    <button class="renewPayment">会员续费</button>
+  </view>
+
+  <view class="privilege">
+    <text>会员特权</text>
+    <view class="hr"></view>
+    <view class="privilegeContent">
+      <image src="../../Picture/lowPrice.png"></image>
+      <text>全网最低教科书价格</text>
+    </view>
+    <view class="hr"></view>
+    <view class="privilegeContent">
+      <image src="../../Picture/discount.png"></image>
+      <text>文具书本双倍折扣</text>
+    </view>
+    <view class="hr"></view>
+    <view class="privilegeContent">
+      <image src="../../Picture/class.png"></image>
+      <text>精品课程优惠</text>
+    </view>
+    <view class="hr"></view>
+    <view class="privilegeContent">
+      <image src="../../Picture/coupon.png"></image>
+      <text>海量零食优惠卷</text>
+    </view>
+    <view class="hr"></view>
+  </view>
+</view>

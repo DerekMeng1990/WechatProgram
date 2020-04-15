@@ -1,0 +1,49 @@
+<view class="couponPage">
+  <view class="title">
+    <text>我的优惠劵</text>
+    <view class="hr"></view>
+  </view>
+
+  <view class="coupon">
+    <view class="eachCoupon">
+      <view class="couponInfo">
+        <text class="couponName">指定烘培产品买一送一</text>
+        <text class="expireDate">有效期至2020年4月09日</text>
+      </view>
+
+      <view class="couponImage">
+        <image src="../../Picture/coffee.png"></image>
+      </view>
+    </view>
+    <view class="couponUseButton" style="top: 280rpx;">
+      <button>立即使用</button>
+    </view>
+    <view class="eachCoupon">
+      <view class="couponInfo">
+        <text class="couponName">指定烘培产品买一送一</text>
+        <text class="expireDate">有效期至2020年4月09日</text>
+      </view>
+
+      <view class="couponImage">
+        <image src="../../Picture/coffee.png"></image>
+      </view>
+    </view>
+    <view class="couponUseButton" style="top: 570rpx;">
+      <button>立即使用</button>
+    </view>
+
+    <view class="eachCoupon">
+      <view class="couponInfo">
+        <text class="couponName">指定烘培产品买一送一</text>
+        <text class="expireDate">有效期至2020年4月09日</text>
+      </view>
+
+      <view class="couponImage">
+        <image src="../../Picture/coffee.png"></image>
+      </view>
+    </view>
+    <view class="couponUseButton" style="top: 860rpx;">
+      <button>立即使用</button>
+    </view>
+  </view>
+</view>

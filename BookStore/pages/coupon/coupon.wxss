@@ -1,0 +1,73 @@
+.couponPage .title{
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-top: 30rpx;
+}
+
+.couponPage .title text{
+  font-size: 40rpx;
+}
+
+.couponPage .title .hr{
+  border: 1rpx solid gray;
+  margin-top: 10rpx;
+}
+
+.couponPage .coupon{
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-top: 30rpx;
+} 
+
+.couponPage .coupon .eachCoupon{
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid gray;
+  margin-bottom: 40rpx;
+  border-radius: 10rpx;
+  box-shadow:  0rpx 0rpx 15px #A9A9A9;
+  height: 250rpx;
+  position: relative;
+}
+
+.couponPage .coupon .eachCoupon .couponInfo{
+  display: flex;
+  flex-direction: column;
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+}
+
+.couponPage .coupon .eachCoupon .couponInfo .couponName{
+  font-size: 35rpx;
+}
+
+.couponPage .coupon .eachCoupon .couponInfo .expireDate{
+  font-size: 25rpx;
+  color: grey;
+}
+
+.couponPage .coupon .couponUseButton{
+  position: absolute;
+  left: 30rpx;
+}
+
+.couponPage .coupon .couponUseButton button{
+  width: 350rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  background-color: #E99A23;
+  font-size: 30rpx;
+  box-shadow:  6rpx 6rpx 2px #A9A9A9;
+}
+
+.couponPage .coupon .eachCoupon .couponImage{
+  position: absolute;
+  right: 60rpx;
+  top: 40rpx;
+}
+
+.couponPage .coupon .eachCoupon .couponImage image{
+  width: 180rpx;
+  height: 180rpx;
+}

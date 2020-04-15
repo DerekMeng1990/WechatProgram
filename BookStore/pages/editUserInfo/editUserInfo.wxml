@@ -1,0 +1,61 @@
+<view class="editUserInfoPage">
+  <view class="title">
+    <text>我的信息</text>
+    <view class="hr"></view>
+  </view>
+  
+  <form class="formContent" bindsubmit="formSubmit">
+    <view class="form">
+      <view class="content">
+        <view class="contentInfo">
+          <text>学校</text>
+          <input style="margin-left:51rpx;"></input>
+        </view>
+      </view>
+      <view class="hr"></view>
+    
+      <view class="content">
+        <view class="contentInfo">
+          <text>专业</text>
+          <input style="margin-left:51rpx;"></input>
+        </view>
+      </view>
+      <view class="hr"></view>
+
+      <view class="content">
+        <view class="contentInfo">
+          <text>年级</text>
+          <input style="margin-left:51rpx;"></input>
+        </view>
+      </view>
+      <view class="hr"></view>
+
+      <view class="content">
+       <view class="contentInfo">
+          <text>班级</text>
+          <input style="margin-left:51rpx;"></input>
+        </view>
+      </view>
+      <view class="hr"></view>
+
+      <view class="content">
+        <view class="contentInfo">
+          <text>宿舍号</text>
+          <input></input>
+        </view>
+      </view>
+      <view class="hr"></view>
+
+      <view class="content">
+        <view class="contentInfo">
+          <text>寝室号</text>
+          <input></input>
+        </view>
+      </view>
+    </view>
+    <view class="submitButton">
+      <button>提交</button>
+    </view>
+  </form>
+</view>
+

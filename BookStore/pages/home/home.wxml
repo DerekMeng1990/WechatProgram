@@ -1,0 +1,61 @@
+ <view class="main">
+    <view class="login">
+      <view class="loginImage">
+        <image src="../../Picture/login.png"></image>
+      </view>
+      <button class="loginButton">登陆</button>
+    </view>
+
+    <view class="carouselDiv">
+      <swiper class="carousel" indicator-dots="true" autoplay="false" interval="5000" duration="1000">
+        <swiper-item>
+          <image src=""></image>
+        </swiper-item>
+        <swiper-item>
+          <image src=""></image>
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <view class="shoppingPage" bindtap="toShoppingPage">
+      <image src="../../Picture/normalShopping.png"></image>
+    </view>
+
+    <view class="headLine">
+      <text>活动速递</text>
+      <view class="hr"></view>
+    </view>
+
+    <view class="events">
+      <view class="event">
+        <image src=""></image>
+        <view class="eventInfo">
+          <text class="date">04/21  星期五</text>
+          <text class="title">医学生！你不可不知的5件事</text>
+          <text>甘棠树下 内蒙古大学ABC校区店</text>
+          <view>
+          <button class="enterButton">立即报名</button>
+          </view>
+        </view>
+        
+        
+      </view>
+     
+      <view class="hr"></view>
+     
+      <view class="event">
+        <image src=""></image>
+        <view class="eventInfo">
+          <text class="date">04/21 星期五</text>
+          <text class="title">医学生！你不可不知的5件事</text>
+          <text>甘棠树下 内蒙古大学ABC校区店</text>
+          <view>
+          <button class="enterButton">立即报名</button>
+          </view>
+        </view>
+        
+        
+      </view>
+      
+    </view>
+</view>

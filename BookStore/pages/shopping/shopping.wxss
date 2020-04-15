@@ -1,0 +1,114 @@
+.shoppingPage{
+  margin-top: 20rpx;
+}
+.shoppingPage .memberInfo{
+  margin-bottom: 30rpx;
+}
+
+.shoppingPage .memberInfo .memberInfoImage{
+  display: flex;
+  justify-content: center;
+}
+
+.shoppingPage .memberInfo .memberInfoImage image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.shoppingPage .memberInfo text{
+  display: flex;
+  justify-content: center;
+}
+
+.shoppingPage .title text{
+  margin-left: 15rpx;
+  margin-bottom: 10rpx;
+  font-size: 40rpx;
+}
+
+.shoppingPage .hr{
+  border: 1rpx solid gray;
+  margin: 0rpx 15rpx 30rpx;
+}
+
+.shoppingPage .bookList{
+  margin-top: 30rpx;
+}
+
+.shoppingPage .bookList .eachBook{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15rpx;
+  margin-bottom: 30rpx;
+}
+
+.shoppingPage .bookList .eachBook .check{
+  display: flex;
+  align-items: center;
+  margin-right: 40rpx;
+  margin-left: 15rpx;
+}
+
+.shoppingPage .bookList .eachBook .check image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.shoppingPage .bookList .eachBook .bookListImage image{
+  width: 180rpx;
+  height: 240rpx;
+  border: 1rpx solid red;
+}
+
+.shoppingPage .bookList .eachBook .bookInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 60rpx;
+}
+
+.shoppingPage .bookList .eachBook .bookInfo .bookName{
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.shoppingPage .bookList .eachBook .bookInfo .bookAuthor{
+  font-size: 25rpx;
+  color: gray;
+}
+
+.shoppingPage .bookList .eachBook .bookInfo .bookMemberPrice{
+  margin-top: 60rpx;
+  color: red;
+  font-size: 30rpx;
+}
+
+.shoppingPage .bookList .eachBook .bookInfo .bookOriginalPrice{
+  font-size: 25rpx;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.shoppingPage .bookList .totalPrice{
+  margin-left: 15rpx;
+  position: relative;
+  font-size: 40rpx;
+}
+
+.shoppingPage .bookList .totalPrice .number{
+  position: absolute;
+  right: 15rpx;
+}
+
+.shoppingPage .buyButton{
+  margin-top: 60rpx;
+  font-size: 50rpx;
+}
+
+.shoppingPage .buyButton button{
+  background-color: #E99A23;
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  box-shadow:  6rpx 6rpx 2px #A9A9A9;
+}

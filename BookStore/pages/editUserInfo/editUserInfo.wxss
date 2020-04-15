@@ -1,0 +1,61 @@
+.editUserInfoPage .title{
+  margin-top: 30rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.editUserInfoPage .title text{
+  font-size: 40rpx;
+}
+
+.editUserInfoPage .title .hr{
+  border: 1rpx solid grey;
+  margin-top: 20rpx;
+}
+
+.editUserInfoPage .formContent .form{
+  border: 1rpx solid grey;
+  border-radius: 10rpx;
+  margin: 30rpx 40rpx;
+  width: 90%;
+}
+
+.editUserInfoPage .formContent .form .content{
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  height: 100rpx;
+}
+
+.editUserInfoPage .formContent .form .content .contentInfo{
+  display: flex;
+  flex-direction: row;
+}
+
+.editUserInfoPage .formContent .form .content .contentInfo text{
+  line-height: 100rpx;
+}
+
+.editUserInfoPage .formContent .form .content .contentInfo input{
+  border-left: 1rpx solid gray;
+  margin-left: 20rpx;
+  height: 80rpx;
+  width: 510rpx;
+  text-align: center;
+}
+
+.editUserInfoPage .form .hr{
+  border: 1rpx solid grey;
+}
+
+.editUserInfoPage .submitButton button{
+  width: 90%;
+  background-color: #E99A32;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  box-shadow: 6rpx 6rpx 2px #A9A9A9;
+}
+
+
+
+

@@ -1,0 +1,80 @@
+.orderPage{
+  margin-top: 20rpx;
+}
+.orderPage .nav{
+  display: flex;
+  flex-direction: row;
+  font-size: 40rpx;
+}
+
+.orderPage .nav .title{
+  margin-left: 100rpx;
+}
+
+.orderPage .nav .selected .hr{
+  border: 6rpx solid #D68305;
+}
+
+.orderPage .mhr{
+  border: 1rpx solid grey;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderPage .orderList .eachOrder{
+  border: 1rpx solid gainsboro;
+  width: 90%;
+  margin-bottom: 20rpx;
+  margin-left: 40rpx;
+  font-size: 25rpx;
+  color: grey;
+  height: 180rpx;
+}
+
+.orderPage .orderList .eachOrder .orderInfo{
+  margin-bottom: 20rpx;
+}
+
+.orderPage .orderList .eachOrder .orderInfo .orderNumber{
+  margin-left: 40rpx;
+}
+
+.orderPage .orderList .eachOrder .orderInfo .orderDate{
+  margin-left: 120rpx;
+}
+
+.orderPage .orderList .eachOrder .totalPrice{
+  font-size: 35rpx;
+  margin-left: 40rpx;
+}
+
+.orderPage .orderList .eachOrder .hr{
+  border: 1rpx dashed grey;
+  margin-top: 2rpx;
+}
+
+.orderPage .orderList .eachOrder .operationButton{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+  position: relative;
+}
+
+.orderPage .orderList .eachOrder .operationButton button{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+  background-color: #E99A23;
+  font-size: 20rpx;
+}
+
+.orderPage .orderList .eachOrder .operationButton .firstButton{
+  position: absolute;
+  right: 200rpx;
+}
+
+.orderPage .orderList .eachOrder .operationButton .secondButton{
+  position: absolute;
+  right: 10rpx;
+}
