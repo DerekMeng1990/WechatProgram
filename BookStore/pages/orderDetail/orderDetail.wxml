@@ -1,3 +1,7 @@
+<!--订单详情页面-->
+<!--插件引用保留两位小数-->
+<wxs src="../../utils/util.wxs" module="tools"></wxs>
+
 <view class ="orderDetailPage">
   <view class="title">订单详情</view>
   <view class="hr"></view>
@@ -8,46 +12,35 @@
       <view class="th right">商品原价</view>
     </view>
     
-    <view class=" tr orderItem">
-      <view class="td left">
-         <text>生命之书</text>
-         <text class="moreInfo">作者: Stuldsosy sleal</text>
+    <block wx:for="{{orderDetailList}}">
+      <view class=" tr orderItem">
+        <view class="td left">
+          <text>{{item.itemName}}</text>
+          <text class="moreInfo">作者: {{item.itemAuthor}}</text>
+        </view>
+        <view class="td middle">
+          <text>X1</text>
+        </view>
+        <view class="td right">
+          <text>¥{{tools.getDecimal(item.itemOriginalPrice)}}</text>
+        </view>
       </view>
-      <view class="td middle">
-        <text>X1</text>
-      </view>
-      <view class="td right">
-        <text>¥49.00</text>
-      </view>
-    </view>
-
-    <view class="tr orderItem">
-      <view class="td left">
-         <text>生命之书</text>
-         <text class="moreInfo">作者: Stuldsosy sleal</text>
-      </view>
-      <view class="td middle">
-        <text>X1</text>
-      </view>
-      <view class="td right">
-        <text>¥49.00</text>
-      </view>
-    </view>
+    </block>
   </view>
   <view class="dhr"></view>
  
   <view class="prices">
     <view class="memberPrice">
        <text>会员价格(含运费¥0.00)</text>
-       <text class="money">¥58.00</text>
+       <text class="money">¥{{tools.getDecimal(totalMemberPrice)}}</text>
     </view>
     <view class="originalPrice">
       <text>原始价格(含运费¥0.00)</text>
-      <text class="money">¥98.00</text>
+      <text class="money">¥{{tools.getDecimal(totalOriginalPrice)}}</text>
     </view>
     <view class="savePrice">
       <text>共节约</text>
-      <text class="money">¥40.00</text>
+      <text class="money">¥{{tools.getDecimal(savePrices)}}</text>
     </view>
   </view>
   <view class="dhr"></view>
@@ -55,11 +48,11 @@
   <view class="orderInfo">
     <view class="orderNumber">
       <text>订单编号</text>
-      <text class="content">8798373628</text>
+      <text class="content">{{orderInfoList.orderNum}}</text>
     </view>
     <view class="orderDate">
       <text>下单时间</text>
-      <text class="content">2020-03-07</text>
+      <text class="content">{{orderInfoList.orderDate}}</text>
     </view>
   </view>
   <view class="dhr"></view>
@@ -67,15 +60,15 @@
   <view class="shippingInfo">
     <view class="shippingName">
       <text>收件人</text>
-      <text class="content">陈女士</text>
+      <text class="content">{{recieveInfoList.recieveName}}</text>
     </view>
     <view class="shippingPhoneNum">
       <text>联系电话</text>
-      <text class="content">13389857467</text>
+      <text class="content">{{recieveInfoList.phoneNum}}</text>
     </view>
     <view class="shippingAddress">
       <text>邮寄地址</text>
-      <text class="content">杭州市西湖区百家园路45号</text>
+      <text class="content">{{recieveInfoList.address}}</text>
     </view>
   </view>
 </view>

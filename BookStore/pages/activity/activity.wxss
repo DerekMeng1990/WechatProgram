@@ -1,0 +1,94 @@
+.activityPage{
+  margin-top: 20rpx;
+}
+
+.activityPage .nav{
+  display: flex;
+  flex-direction: row;
+  font-size: 40rpx;
+}
+
+.activityPage .nav .title{
+  margin-left: 160rpx; 
+  color: grey; 
+}
+
+.activityPage .nav .selected{
+  color: black;
+}
+
+.activityPage .nav .selected .hr{
+  border: 6rpx solid #D68305
+}
+
+.activityPage .mhr{
+  border: 1rpx solid gray;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  margin: 10rpx 30rpx 20rpx;
+}
+
+.activityPage .eachActivity{
+  border: 2rpx solid grey;
+  margin: 20rpx 80rpx;
+  border-radius: 10rpx;
+  width: 80%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.activityPage .eachActivity .activityTitle{
+  display: flex;
+  flex-direction: row;
+  font-size: 27rpx;
+  margin-bottom: 5rpx;
+  margin-left: 40rpx;
+  color: grey;
+}
+
+.activityPage .eachActivity .activityTitle .lhr{
+  border-left: 4rpx solid gainsboro;
+  height: 30rpx;
+  margin: 8rpx 20rpx 0rpx 10rpx;
+}
+
+.activityPage .eachActivityWithSelecter{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.activityPage .eachActivityWithSelecter .check{
+  position: absolute;
+  top: 100rpx;
+  left: 40rpx;
+}
+
+checkbox .wx-checkbox-input{
+  border-radius: 100%;
+  width: 27rpx;
+  height: 27rpx;
+  border-color: #A9A9A9;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border-color: #E99A23;
+  background: #E99A23;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  color: #fff;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.activityPage .cancleButton button{
+  font-size: 25rpx;
+  width: 150rpx;
+  box-shadow: 4rpx 4rpx 2px #A9A9A9;
+  background: #E99A23;
+  margin-top: 100rpx;
+  margin-left: 520rpx;
+}

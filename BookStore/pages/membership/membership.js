@@ -1,11 +1,43 @@
-// pages/membership/membership.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    //后台获取会员信息
+    memberInfo: {ID: '5413458', cardNum: '1234 2348 8739 5421', name: '张三'},
+    isMember: false,
+    privilegeContentList: [{ image: '../../Picture/lowPrice.png', title:'全网最低教科书价格'},
+      { image: '../../Picture/discount.png', title: '文具书本双倍折扣' }, { image:'../../Picture/class.png',
+        title:'精品课程优惠'}, {image:'../../Picture/coupon.png', title:'海量零食优惠券'}],
+    membercardImage: '../../Picture/membershipCard.png'
+  },
 
+  /**
+   * 跳转到支付界面
+   * @example
+   * 判断是否是会员 false --> 跳转到注册界面
+   */
+  toPaymengPage: function(){
+    var isMember = this.data.isMember
+    if(isMember == false){
+      wx.navigateTo({
+        url: '../editUserInfo/editUserInfo',
+      })
+    }
+    else{
+
+    }
+  },
+
+  /**
+   * 跳转到全部特权页面
+   */
+  toTotalPrivilegesPage: function(){
+    wx:wx.navigateTo({
+      url: '../totalPrivileges/totalPrivileges'
+    })
   },
 
   /**

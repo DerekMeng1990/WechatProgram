@@ -7,7 +7,9 @@
     "pages/coupon/coupon",
     "pages/editUserInfo/editUserInfo",
     "pages/order/order",
-    "pages/orderDetail/orderDetail"
+    "pages/orderDetail/orderDetail",
+    "pages/totalPrivileges/totalPrivileges",
+    "pages/activity/activity"
 
   ],
   "window": {
@@ -17,7 +19,6 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar":{
-    
     "selectedColor": "E99A23",
     "backgroundColor": "#fffff",
     "borderStyle": "black",
@@ -37,5 +38,9 @@
       "iconPath": "Picture/userCenter.png",
       "selectedIconPath": "Picture/userCenterPress.png"
     }]
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui" : true
   }
 }

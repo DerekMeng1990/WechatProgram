@@ -3,6 +3,7 @@
 }
 .shoppingPage .memberInfo{
   margin-bottom: 30rpx;
+  position: relative;
 }
 
 .shoppingPage .memberInfo .memberInfoImage{
@@ -13,6 +14,18 @@
 .shoppingPage .memberInfo .memberInfoImage image{
   width: 100rpx;
   height: 100rpx;
+}
+
+.shoppingPage .memberInfo .userImage{
+  position: absolute;
+  top: 10rpx;
+  left: 335rpx;
+}
+
+.shoppingPage .memberInfo .userImage image{
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
 }
 
 .shoppingPage .memberInfo text{
@@ -35,6 +48,20 @@
   margin-top: 30rpx;
 }
 
+.shoppingPage .bookList .allPick{
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+
+.shoppingPage .bookList .allPick text{
+  left: 40rpx;
+  font-size: 29rpx;
+  position: absolute;
+  top: 4rpx;
+}
+
 .shoppingPage .bookList .eachBook{
   display: flex;
   flex-direction: row;
@@ -49,9 +76,22 @@
   margin-left: 15rpx;
 }
 
-.shoppingPage .bookList .eachBook .check image{
-  width: 30rpx;
-  height: 30rpx;
+checkbox .wx-checkbox-input{
+  border-radius: 100%;
+  width: 27rpx;
+  height: 27rpx;
+  border-color: #A9A9A9;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border-color: #E99A23;
+  background: #E99A23;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  color: #fff;
+  align-items: center;
+  font-size: 26rpx;
 }
 
 .shoppingPage .bookList .eachBook .bookListImage image{

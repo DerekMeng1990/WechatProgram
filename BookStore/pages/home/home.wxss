@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 10rpx;
+  position: relative;
 }
 
 .main .login .loginImage{
@@ -23,11 +24,23 @@
   font-size: 20rpx;
   margin-top: -95rpx;
   background-color: #E99A23;
+  margin-bottom: 60rpx;
+}
+
+.main .login .userImage{
+  position: absolute;
+  left: 307rpx;
+}
+
+.main .login .userImage image{
+  width: 138rpx;
+  height: 138rpx;
+  border-radius: 50%;
 }
 
 .main .carouselDiv{
   border: 1px solid red;
-  margin: 60rpx 15rpx 15rpx;
+  margin: 0rpx 15rpx 15rpx;
 }
 
 .main .shoppingPage{
@@ -104,3 +117,12 @@
   margin-right: 0rpx;
 }
 
+.dialogTitle{
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20rpx;
+}
+
+.dialogContent{
+  text-align: left;
+}

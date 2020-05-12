@@ -1,54 +1,55 @@
+<!--我的商城-->
+<!--工具插件调用，保留两位小数-->
+<wxs src="../../utils/util.wxs" module="tools"></wxs>
+
 <view class="shoppingPage">
   <view class="memberInfo">
     <view class="memberInfoImage">
-      <image src="../../Picture/circle.png"></image>
+      <image src="{{circleImage}}"></image>
     </view>
-    <text>你好，张三</text>
+    <!--修改首页跳转页面后，应该省略这里的if判定-->
+    <block wx:if="{{hasUserInfo}}">
+      <view class="userImage">
+        <image src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <text>你好，{{userInfo.nickName}}</text>
+    </block>
+    
   </view>
 
   <view class="title">
     <text>我的图书列表</text>
     <view class="hr"></view>
   </view>
-
   <view class="bookList">
-    <view class="eachBook">
-      <view class="check">
-        <image src="../../Picture/unchecked.png"></image>
+    <block wx:for="{{bookList}}" wx:key="index">
+      <view class="eachBook">
+        <view class="check" bindtap="checked" id="{{item.index}}" data-checked="{{item.checked}}">
+          <checkbox checked="{{item.checked}}"></checkbox>
+        </view>
+        <view class="bookListImage">
+          <image src="{{item.bookImage}}"></image>
+        </view>
+        <view class="bookInfo">
+          <text class="bookName">{{item.bookName}}</text>
+          <text class="bookAuthor">作者: {{item.bookAuthor}}</text>
+          <text class="bookMemberPrice">会员价¥{{tools.getDecimal(item.memberPrice)}}</text>
+          <text class="bookOriginalPrice">定价¥{{tools.getDecimal(item.originalPrice)}}</text>
+        </view>
       </view>
-      <view class="bookListImage">
-        <image src=""></image>
-      </view>
-      <view class="bookInfo">
-        <text class="bookName">生命之书</text>
-        <text class="bookAuthor">作者: Stuldsosy sleol</text>
-        <text class="bookMemberPrice">会员价¥17.00</text>
-        <text class="bookOriginalPrice">定价¥29.00</text>
-      </view>
+      <view class="hr"></view>
+    </block>
+    <view class="allPick" bindtap="allPickOpertaion" data-checked="{{allPick.checked}}">
+      <checkbox checked="{{allPick.checked}}"></checkbox>
+      <text>全选</text>
     </view>
-    <view class="hr"></view>
-    <view class="eachBook">
-      <view class="check">
-        <image src="../../Picture/unchecked.png"></image>
-      </view>
-      <view class="bookListImage">
-        <image src=""></image>
-      </view>
-      <view class="bookInfo">
-        <text class="bookName">生命之书</text>
-        <text class="bookAuthor">作者: Stuldsosy sleol</text>
-        <text class="bookMemberPrice">会员价 ¥17.00</text>
-        <text class="bookOriginalPrice">定价 ¥29.00</text>
-      </view>
-    </view>
-    <view class="hr"></view>
     <view class="totalPrice">
       <text>总计</text>
-      <text class="number">¥34.00</text>
+      <text class="number">¥{{tools.getDecimal(totalPrice)}}</text>
     </view>
   </view>
 
   <view class="buyButton">
-    <button>立即购买</button>
+    <button disabled="{{disabled}}">立即购买</button>
   </view>
 </view>

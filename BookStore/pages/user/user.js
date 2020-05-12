@@ -1,30 +1,30 @@
-// pages/user/user.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo:{ID:'5413458', cardNum:'0982 1234 2343 8739', name:'张三'},
+    functionList: [{id:'coupon', title:'我的优惠券'}, {id:'order', title:'我的订单'}, 
+    { id: 'activity', title: '我的活动' }, { id: 'editUserInfo', title: '修改个人信息' },
+    {id:'customService', title:'联系客服'},],
+    membercardImage: '../../Picture/membershipCard.png'
   },
 
-  toCouponPage: function(){
+
+  /**
+   * 功能页面跳转
+   */
+  toFunctionPage:function(e){
+    var functionName = e.currentTarget.id
+    var address = '../' + functionName + '/' + functionName
     wx.navigateTo({
-      url: '../coupon/coupon'
+      url: address
     })
   },
 
-  toEditUserInfoPage: function(){
-    wx.navigateTo({
-      url: '../editUserInfo/editUserInfo'
-    })
-  },
-
-  toOrderPage: function(){
-    wx.navigateTo({
-      url: '../order/order'
-    })
-  },
+  
 
   /**
    * 生命周期函数--监听页面加载

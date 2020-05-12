@@ -1,36 +1,24 @@
+<!--个人中心-->
 <view class="user">
   <view class="userCenter">
     <view class="userCenterImage">
-      <image src="../../Picture/membershipCard.png"></image>
+      <image src="{{membercardImage}}"></image>
     </view>
 
     <view class="userInfo">
-      <text>ID: 5413458</text>
-      <text>0982 1234 2343 8739</text>
-      <text>张三</text>
+      <text>ID: {{userInfo.ID}}</text>
+      <text>{{userInfo.cardNum}}</text>
+      <text>{{userInfo.name}}</text>
     </view>
   </view>
 
   <view class="redirect">
-    <view class="functionRedirect" bindtap="toCouponPage">
-      <view>我的优惠劵</view>
-      <view class="right">></view>
-    </view>
-    <view class="hr"></view>
-    <view class="functionRedirect" bindtap="toOrderPage">
-      <view>我的订单</view>
-      <view class="right">></view>
-    </view>
-    <view class="hr"></view>
-    <view class="functionRedirect" bindtap="toEditUserInfoPage">
-      <view>修改个人信息</view>
-      <view class="right">></view>
-    </view>
-    <view class="hr"></view>
-    <view class="functionRedirect">
-      <view>联系客服</view>
-      <view class="right">></view>
-    </view>
-     <view class="hr"></view>
+    <block wx:for="{{functionList}}">
+      <view class="functionRedirect" bindtap="toFunctionPage" id="{{item.id}}">
+        <view>{{item.title}}</view>
+        <view class="right">></view>
+      </view>
+      <view class="hr"></view>
+    </block>
   </view>
 </view>

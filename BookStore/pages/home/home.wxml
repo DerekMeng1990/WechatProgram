@@ -1,24 +1,30 @@
- <view class="main">
+ <!--首页-->
+  <view class="main">
     <view class="login">
       <view class="loginImage">
-        <image src="../../Picture/login.png"></image>
+        <image src="{{loginPicture}}"></image>
       </view>
-      <button class="loginButton">登陆</button>
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" 
+      bindgetuserinfo="getUserInfo" class="loginButton">登陆</button>
+      <block wx:else>
+        <view class="userImage">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+      </block>
     </view>
 
-    <view class="carouselDiv">
+    <view class="carouselDiv" style="margin-top:{{marginTop}}rpx;">
       <swiper class="carousel" indicator-dots="true" autoplay="false" interval="5000" duration="1000">
-        <swiper-item>
-          <image src=""></image>
-        </swiper-item>
-        <swiper-item>
-          <image src=""></image>
-        </swiper-item>
+        <block wx:for="{{carouselList}}">
+          <swiper-item>
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
       </swiper>
     </view>
 
     <view class="shoppingPage" bindtap="toShoppingPage">
-      <image src="../../Picture/normalShopping.png"></image>
+      <image src="{{normalShoppingButton}}"></image>
     </view>
 
     <view class="headLine">
@@ -27,35 +33,25 @@
     </view>
 
     <view class="events">
-      <view class="event">
-        <image src=""></image>
-        <view class="eventInfo">
-          <text class="date">04/21  星期五</text>
-          <text class="title">医学生！你不可不知的5件事</text>
-          <text>甘棠树下 内蒙古大学ABC校区店</text>
-          <view>
-          <button class="enterButton">立即报名</button>
+      <block wx:for="{{eventList}}" wx:for-index="index">
+        <view class="event">
+          <image src="{{item.image}}"></image>
+          <view class="eventInfo">
+            <text class="date">{{item.date}}</text>
+            <text class="title">{{item.title}}</text>
+            <text>{{item.location}}</text>
+            <view>
+            <button class="enterButton" bindtap="signUp" data-id="{{index}}">立即报名</button>
+            </view>
           </view>
         </view>
-        
-        
-      </view>
-     
-      <view class="hr"></view>
-     
-      <view class="event">
-        <image src=""></image>
-        <view class="eventInfo">
-          <text class="date">04/21 星期五</text>
-          <text class="title">医学生！你不可不知的5件事</text>
-          <text>甘棠树下 内蒙古大学ABC校区店</text>
-          <view>
-          <button class="enterButton">立即报名</button>
-          </view>
-        </view>
-        
-        
-      </view>
-      
+        <view wx:if="{{index != eventList.length -1}}" class="hr"></view>
+      </block>
     </view>
+
+    <mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{button}}">
+      <view class="dialogTitle">报名成功!</view>
+      <view class="dialogContent">尊敬的{{userInfo.nickName}}会员，您已经报名了\n{{dialogContent.date}}
+      的{{dialogContent.title}}活动，详情请在“个人中心 > 我的活动”中查看。</view>
+    </mp-dialog>
 </view>

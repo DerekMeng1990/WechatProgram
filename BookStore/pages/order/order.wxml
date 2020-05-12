@@ -1,48 +1,41 @@
+<!--我的订单页-->
+<!--插件引用，取两位小数-->
+<wxs src="../../utils/util.wxs" module="tools"></wxs>
+
 <view class="orderPage">
   <view class="nav">
-    <view id="0" class="{{currentTab == 0?'selected':'unselected'}} title" bindtap="switchNav">
-      <text>待发货</text>
-      <view class="hr"></view>
-    </view>
-
-    <view id="1" class="{{currentTab == 1?'selected':'unselected'}} title" bindtap="switchNav">
-      <text>待收货</text>
-      <view class="hr"></view>
-    </view>
-
-    <view id="2" class="{{currentTab == 2?'selected':'unselected'}} title" bindtap="switchNav">
-      <text>已收货</text>
-      <view class="hr"></view>
-    </view>
+    <block wx:for="{{navList}}">
+      <view id="{{item.id}}" class="{{currentTab == item.id?'selected':'unselected'}} title" bindtap="switchNav">
+        <text>{{item.navName}}</text>
+        <view class="hr"></view>
+      </view>
+    </block>
   </view>
-
   <view class="mhr"></view>
   
   <view class="orderList">
-    <view class="eachOrder">
-      <view class="orderInfo">
-        <text class="orderNumber">订单编号: 8798373628</text>
-        <text class="orderDate">下单时间: 2020-03-07</text>
+    <block wx:for="{{orderList}}" wx:key="unique">
+      <view class="eachOrder" id="{{item.id}}" hidden="{{item.hidden}}">
+        <view class="orderInfo">
+          <text class="orderNumber">订单编号: {{item.orderNum}}</text>
+          <text class="orderDate">下单时间: {{item.date}}</text>
+        </view>
+        <view class="totalPrice">总价: ¥{{tools.getDecimal(item.totalPrice)}} (含运费¥{{item.shippingFee}})</view>
+        <view class="hr"></view>
+        <view class="operationButton">
+          <block>
+            <button wx:if="{{item.id == 0}}" class="firstButton" 
+            bindtap="click" disabled="{{item.disabled}}" data-unique="{{item.unique}}">提醒发货</button>
+            
+            <button wx:elif="{{item.id == 1}}" class="firstButton" 
+            bindtap="click" disabled="{{item.disabled}}" data-unique="{{item.unique}}">确认收货</button>
+            
+            <button wx:else="{{item.id == 2}}" class="firstButton" 
+            hidden="true" data-unique="{{item.unique}}">提醒发货</button>
+          </block>
+          <button class="secondButton" bindtap="toOrderDetailPage">订单详情</button>
+        </view>
       </view>
-      <view class="totalPrice">总价: ¥58.00 (含运费¥0.00)</view>
-      <view class="hr"></view>
-      <view class="operationButton">
-        <button class="firstButton">提醒发货</button>
-        <button class="secondButton" bindtap="toOrderDetailPage">订单详情</button>
-      </view>
-    </view>
-
-    <view class="eachOrder">
-      <view class="orderInfo">
-        <text class="orderNumber">订单编号: 8798373628</text>
-        <text class="orderDate">下单时间: 2020-03-07</text>
-      </view>
-      <view class="totalPrice">总价: ¥58.00 (含运费¥0.00)</view>
-      <view class="hr"></view>
-      <view class="operationButton">
-        <button class="firstButton">提醒发货</button>
-        <button class="secondButton" toOrderDetailPage>订单详情</button>
-      </view>
-    </view>
+    </block>
   </view>
 </view>

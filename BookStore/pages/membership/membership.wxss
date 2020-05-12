@@ -43,9 +43,30 @@
   margin: 80rpx 15rpx 30rpx;
 }
 
-.member .privilege text{
+.member .privilege .privilegeHeader{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20rpx;
+}
+
+.member .privilege .privilegeHeader .left{
+  flex: 1;
+}
+
+.member .privilege .privilegeHeader .left text{
   font-size: 40rpx;
   font-weight: bold;
+}
+
+.member .privilege .privilegeHeader .right{
+  margin-top: 10rpx;
+  margin-right: 30rpx;
+}
+
+.member .privilege .privilegeHeader .right text{
+  font-size: 25rpx;
+  color: gray;
 }
 
 .member .privilege .hr{
@@ -56,6 +77,9 @@
 .member .privilege .privilegeContent{
   height: 30rpx;
   margin: 60rpx 50rpx 0rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .member .privilege .privilegeContent image{

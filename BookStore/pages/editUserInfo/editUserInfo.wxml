@@ -1,3 +1,4 @@
+<!--我的信息页-->
 <view class="editUserInfoPage">
   <view class="title">
     <text>我的信息</text>
@@ -6,56 +7,45 @@
   
   <form class="formContent" bindsubmit="formSubmit">
     <view class="form">
-      <view class="content">
-        <view class="contentInfo">
-          <text>学校</text>
-          <input style="margin-left:51rpx;"></input>
+      <block wx:for="{{contentList}}" wx:for-index="index">
+        <view class="content">
+          <view class="contentInfo">
+            <text>{{item.contentName}}</text>
+            <block wx:if="{{index == 2}}">
+              <picker bindchange="bindPickerChange" range="{{pickerList}}" mode="selector" data-id="{{index}}">
+                <input style="margin-left:51rpx"value="{{inputValue[index]}}" 
+                  placeholder="{{placeholderList[index]}}" id="{{index}}" bindblur="bindblur">
+                </input>
+              </picker>
+            </block>
+            <block wx:else>
+              <input style="margin-left:{{index < 4 || index > 5?'51rpx':''}}" bindinput="bindinput"
+                value="{{inputValue[index]}}" placeholder="{{placeholderList[index]}}" id="{{index}}" 
+                bindblur="bindblur">
+              </input>
+            </block>
+           </view>
         </view>
-      </view>
-      <view class="hr"></view>
-    
-      <view class="content">
-        <view class="contentInfo">
-          <text>专业</text>
-          <input style="margin-left:51rpx;"></input>
+        <view wx:if="{{index !=6}}" class="hr"></view>
+      </block>
+      <scroll-view scrolly-y="true" class="scrollView" hidden="{{hidden}}" style="top:{{top}}rpx">
+        <view wx:for="{{bindSource}}">
+          <view id="{{item}}" bindtap="itemTap" class="itemView" data-id="{{contentId}}">{{item}}</view>
         </view>
-      </view>
-      <view class="hr"></view>
-
-      <view class="content">
-        <view class="contentInfo">
-          <text>年级</text>
-          <input style="margin-left:51rpx;"></input>
-        </view>
-      </view>
-      <view class="hr"></view>
-
-      <view class="content">
-       <view class="contentInfo">
-          <text>班级</text>
-          <input style="margin-left:51rpx;"></input>
-        </view>
-      </view>
-      <view class="hr"></view>
-
-      <view class="content">
-        <view class="contentInfo">
-          <text>宿舍号</text>
-          <input></input>
-        </view>
-      </view>
-      <view class="hr"></view>
-
-      <view class="content">
-        <view class="contentInfo">
-          <text>寝室号</text>
-          <input></input>
-        </view>
-      </view>
+      </scroll-view>
     </view>
     <view class="submitButton">
-      <button>提交</button>
+      <button bindtap="submitInfo">提交</button>
     </view>
+    <!--弹窗组件-->
+    <mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+      <block wx:for="{{contentList}}" wx:for-index="index">
+        <view class="submitDetail">
+          <text class="contentName">{{contentList[index].contentName}}</text>
+          <text>{{inputValue[index]}}</text>
+        </view>
+      </block>
+    </mp-dialog>
   </form>
 </view>
 

@@ -1,0 +1,46 @@
+<!--我的活动页-->
+
+<view class="activityPage">
+  <view class="nav">
+    <block wx:for="{{navList}}">
+      <view id="{{item.id}}" class="{{currentTab == item.id?'selected':'unselected'}} title" 
+      bindtap="switchNav">
+        <text>{{item.navName}}</text>
+        <view class="hr"></view>
+      </view>
+    </block>
+  </view>
+  <view class="mhr"></view>
+
+  <block wx:for="{{eventList}}" wx:for-item="item" wx:for-index="idx">
+    <view class="eachActivityWithSelecter" id="{{item.id}}" style="display:{{item.display}}">
+      <block wx:if="{{item.id == 0}}">
+        <view class="check" bindtap="checked" data-position="{{item.index}}">
+          <checkbox></checkbox>
+        </view>
+      </block>
+      <view class="eachActivity">
+        <block wx:for="{{activityTitleList}}" wx:for-item="title" wx:for-index="index">
+          <view class="activityTitle">
+            <text>{{title.titleName}}</text>
+            <view class="lhr"></view>
+            <block wx:if="{{index == 0}}">
+              <text>{{item.title}}</text>
+            </block>
+            <block wx:elif="{{index == 1}}">
+              <text>{{item.date}}</text>
+            </block>
+            <block wx:else>
+              <text>{{item.location}}</text>
+            </block>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{currentTab == 0}}">
+    <view class="cancleButton">
+      <button disabled="{{disabled}}" bindtap="cancle">取消预约</button>
+     </view>
+  </block>
+</view>

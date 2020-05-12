@@ -1,0 +1,4 @@
+var getDecimal = function (value) {
+  return value.toFixed(2)
+}
+module.exports.getDecimal = getDecimal;
