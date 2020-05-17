@@ -227,6 +227,7 @@ CREATE TABLE IF NOT EXISTS `Member`.`Book` (
   `member_price` INT(11) NOT NULL,
   `original_price` INT(11) NOT NULL,
   `store_num` INT(11) NOT NULL,
+  `image_path` VARCHAR(255) NOT NULL,
   `GID` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Book_Grade1_idx` (`GID` ASC),
